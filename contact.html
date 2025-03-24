@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wasiliana Nasi - Ujuzi wa Kilimo cha Kilosa</title>
+    <style>
+        :root {
+            --primary-color: #2c7d4a;
+            --secondary-color: #f5f9f6;
+            --accent-color: #e8f4ea;
+            --text-color: #333;
+            --light-gray: #f9f9f9;
+            --link-color: #1e5631;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--light-gray);
+        }
+        
+        h1, h2 {
+            color: var(--primary-color);
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 30px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            animation: modalopen 0.4s;
+            text-align: center;
+            border: 2px solid var(--primary-color);
+        }
+        
+        @keyframes modalopen {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .modal-content i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .modal-content h2 {
+            margin-top: 0;
+        }
+        
+        .close-modal {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .close-modal:hover {
+            background-color: #1e5631;
+        }
+        
+        /* Rest of your existing styles... */
+        .intro-text {
+            font-size: 1.2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        
+        .contact-card {
+            flex: 1 1 300px;
+            max-width: 400px;
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        
+        .contact-info {
+            margin: 20px 0;
+        }
+        
+        .contact-info p {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info strong {
+            color: var(--primary-color);
+            min-width: 80px;
+            display: inline-block;
+        }
+        
+        .contact-icon {
+            margin-right: 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .back-link:hover {
+            background-color: #1e5631;
+            transform: translateY(-2px);
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid var(--accent-color);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1e5631;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-card {
+                max-width: 100%;
+            }
+            
+            .modal-content {
+                width: 90%;
+                margin: 30% auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1>Wasiliana na Wataalamu Wetu wa Kilimo</h1>
+    
+    <p class="intro-text">
+        Una maswali kuhusu mbinu za kilimo au unahitaji ushauri maalum kwa shamba lako huko Kilosa?
+        Timu yetu ya wataalamu wa kilimo iko hapa kukusaidia kuboresha mavuno yako na kutumia mbinu endelevu.
+    </p>
+    
+    <div class="contact-container">
+        <div class="contact-card">
+            <h3><i class="fas fa-phone-alt contact-icon"></i> Maelezo ya Mawasiliano</h3>
+            <div class="contact-info">
+                <p><strong><i class="fas fa-phone contact-icon"></i> Simu:</strong> +255 123 456 789</p>
+                <p><strong><i class="fas fa-mobile-alt contact-icon"></i> Simu ya Mkononi:</strong> +255 765 432 100</p>
+                <p><strong><i class="fas fa-envelope contact-icon"></i> Barua Pepe:</strong> farmingkilosa@gmail.com</p>
+                <p><strong><i class="fas fa-map-marker-alt contact-icon"></i> Anwani:</strong> Kituo cha Kilimo cha Kilosa, Barabara ya Morogoro</p>
+            </div>
+        </div>
+        
+        <div class="contact-card">
+            <h3><i class="far fa-clock contact-icon"></i> Masaa ya Ofisi</h3>
+            <div class="contact-info">
+                <p><strong>Jumatatu-Ijumaa:</strong> 8:00 asubuhi - 5:00 jioni</p>
+                <p><strong>Jumamosi:</strong> 9:00 asubuhi - 2:00 mchana</p>
+                <p><strong>Jumapili:</strong> Imefungwa</p>
+                <p><strong>Dharura:</strong> Tunapatikana masaa yote kwa matatizo ya kilimo ya haraka</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contact-form">
+        <h2><i class="fas fa-paper-plane contact-icon"></i> Tuma Ujumbe Kwetu</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Jina Lako</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Nambari ya Simu</label>
+                <input type="tel" id="phone">
+            </div>
+            <div class="form-group">
+                <label for="email">Barua Pepe</label>
+                <input type="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="subject">Mada</label>
+                <input type="text" id="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Ujumbe Wako</label>
+                <textarea id="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Tuma Ujumbe</button>
+        </form>
+    </div>
+    
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle"></i>
+            <h2>Ujumbe Umetumwa Kikamilifu!</h2>
+            <p>Asante kwa kuwasiliana na Ujuzi wa Kilimo cha Kilosa. Timu yetu itakujibu ndani ya siku 2 za kazi.</p>
+            <p>Kwa mambo ya dharura, tafadhali piga simu ya dharura yetu: <strong>+255 765 432 100</strong></p>
+            <button class="close-modal" onclick="closeModal()">Funga</button>
+        </div>
+    </div>
+    
+    <div style="text-align: center;">
+        <a href="home.html" class="back-link">Rudi Nyumbani</a>
+    </div>
+
+    <script>
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent actual form submission
+            
+            // Here you would normally send the form data to a server
+            // For this example, we'll just show the success message
+            
+            // Get form values (for demonstration)
+            const name = document.getElementById('name').value;
+            const subject = document.getElementById('subject').value;
+            
+            // Show success modal
+            document.getElementById('successModal').style.display = 'block';
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Close modal function
+        function closeModal() {
+            document.getElementById('successModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('successModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

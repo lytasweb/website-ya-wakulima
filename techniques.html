@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mbinu za Kilimo</title>
+    <style>
+        :root {
+            --primary-color: #2c7d4a;
+            --secondary-color: #f5f9f6;
+            --accent-color: #e8f4ea;
+            --text-color: #333;
+            --light-gray: #f9f9f9;
+            --link-color: #1e5631;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--light-gray);
+        }
+        
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            margin-top: 40px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 8px;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        
+        h3 a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        h3 a:hover {
+            color: #1e5631;
+            text-decoration: underline;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 30px 0;
+            justify-content: center;
+        }
+        
+        .image-card {
+            flex: 1 1 300px;
+            min-width: 250px;
+            max-width: 500px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--accent-color);
+        }
+        
+        .image-caption {
+            padding: 18px;
+        }
+        
+        .image-caption p {
+            margin-bottom: 0;
+            color: #555;
+        }
+        
+        .benefits-list {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .benefits-list ul {
+            padding-left: 20px;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 8px;
+        }
+        
+        .links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .links a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .links a:hover {
+            background-color: #1e5631;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background-color: #1e5631;
+        }
+        
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .image-card {
+                max-width: 100%;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Mbinu za Kilimo</h1>
+    
+    <section class="section">
+        <h2>Mzunguko wa Mazao</h2>
+        <p>Badilisha mazao kama mahindi na maharage kila msimu ili kudumisha afya ya udongo na kupunguza wadudu kwa njia asili. Kwa mfano, panda mahindi mwaka huu katika sehemu moja ya shamba lako, kisha mwaka ujao panda maharage au karanga kwenye eneo lilelile. Njia hii inazuia wadudu na magonjwa yanayoshambulia mazao yale yale kila mwaka kujilimbikiza, kama vidukari vya mahindi. Pia inasaidia udongo wako kubaki imara kwa sababu mazao tofauti hutumia na kuongeza virutubisho tofauti - maharage, kwa mfano, huweka nitrojeni nyuma kwenye udongo, ambayo mahindi hupenda. Anza kwa kugawanya ardhi yako katika vipande vidogo na upange mzunguko rahisi: mahindi, kisha maharage, halafu labda mtama. Baada ya muda, utaona magugu machache, mimea yenye afya, na mavuno bora bila kuhitaji kemikali ghali!</p>
+        
+        <div class="image-container">
+            <div class="image-card">
+                <img src="images/rotation2.jpg" alt="Mchoro wa Mzunguko wa Mazao">
+                <div class="image-caption">
+                    <h3><a href="https://seedsandplants.co.za/gardening-tips/crop-rotation/" target="_blank">Mwongozo wa Mzunguko wa Mazao</a></h3>
+                    <p>Jifunze misingi ya mifumo bora ya mzunguko wa mazao.</p>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <img src="images/rotation.jpg" alt="Mfano wa Mzunguko wa Mazao">
+                <div class="image-caption">
+                    <h3><a href="https://sagrainmag.co.za/2021/07/12/better-results-with-legumes-in-rotation-with-maize/" target="_blank">Mzunguko wa Mahindi na Mimea ya Kunde</a></h3>
+                    <p>Gundua jinsi mzunguko wa mahindi na mimea ya kunde unavyoboresha mavuno.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="benefits-list">
+            <h3>Faida Kuu za Mzunguko wa Mazao:</h3>
+            <ul>
+                <li>Hupunguza wadudu na magonjwa</li>
+                <li>Huboresha usawa wa virutubisho vya udongo</li>
+                <li>Huongeza mavuno baada ya muda</li>
+                <li>Hupunguza uhitaji wa mbolea za kemikali</li>
+                <li>Husaidia kudhibiti magugu kwa njia asili</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2>Utunzaji wa Udongo</h2>
+        <p>Ongeza mbolea au mboji kwenye udongo wako ili kuufanya uwe tajiri na kusaidia mimea yako kukua kwa nguvu na afya. Tumia mabaki kama maganda ya mboga, maganda ya ndizi, au mashina ya mahindi, na uchanganye na mavi ya ng'ombe, mbuzi, au kuku. Weka kwenye rundo mahali penye kivuli, weka unyevu kama nguo iliyokamuliwa, na ugeuze kila baada ya wiki chache kwa kijembe au jembe - itageuka kuwa mbolea nyeusi, yenye vipande vipande baada ya takriban miezi miwili. Tawanya hii juu ya mashamba yako kabla ya kupanda, au ichimbie kwenye udongo karibu na mazao yako. Hii inalisha mimea yako kwa njia asili, huhifadhi maji vizuri wakati wa ukame, na huzuia udongo wako kuwa mgumu na uchovu. Unaweza pia kuongeza majivu kutoka kwa moto wako ili kutoa virutubisho vya ziada kama potasiamu - mazao yako yatakushukuru kwa mavuno makubwa!</p>
+        
+        <div class="image-container">
+            <div class="image-card">
+                <img src="images/soil3.jpg" alt="Kutengeneza Mbolea">
+                <div class="image-caption">
+                    <h3><a href="https://oneacrefund.org/articles/how-soil-testing-helping-smallholders-tanzania-improve-soil-health" target="_blank">Kupima Udongo Tanzania</a></h3>
+                    <p>Jinsi upimaji wa udongo unavyowasaidia wakulima wadogo kuboresha afya ya udongo.</p>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <img src="images/soil2.jpg" alt="Udongo Wenye Afya">
+                <div class="image-caption">
+                    <h3><a href="https://www.thecitizen.co.tz/tanzania/oped/prioritising-soil-health-for-improved-yields-among-tanzania-s-smallholders-4845856" target="_blank">VIPaumbele vya Afya ya Udongo</a></h3>
+                    <p>Kwa nini afya ya udongo ni muhimu kwa wakulima wadogo wa Tanzania.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="benefits-list">
+            <h3>Faida za Utunzaji Sahihi wa Udongo:</h3>
+            <ul>
+                <li>Huboresha muundo na rutuba ya udongo</li>
+                <li>Huongeza uwezo wa kuhifadhi maji wakati wa ukame</li>
+                <li>Hupunguza uhitaji wa mbolea za kemikali</li>
+                <li>Huhamasisha utendaji wa vijidudu muhimu</li>
+                <li>Huongeza mavuno na ubora wa mazao</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2>Kilimo cha Mchanganyiko</h2>
+        <p>Panda mazao mawili au zaidi pamoja, kama mahindi na maharage au mbaazi, ili kutumia vizuri zaidi ardhi yako na kuifanya ibaki na afya. Panda mahindi kwa safu, kisha ongeza maharage au mbaazi kati yao - mahindi hutoa kivuli na msaada, huku maharage yakiongeza nitrojeni kwenye udongo, na kufanya mazao ya mahindi yanayofuata kuwa bora zaidi. Hila hii pia huwachanganya wadudu, kwa hivyo hupoteza mazao machache kwa wadudu kama mende au viwavi. Jaribu kuweka mahindi umbali wa futi moja na maharage karibu kidogo, ukivipanda wakati mmoja baada ya mvua kuanza. Utaweza kuvuna mazao mawili kutoka shamba moja - mahindi kwa chakula na maharage ya kula au kuuza - pamoja na udongo wako ukibaki kufunikwa, na hivyo kupunguza magugu na mmomonyoko wa udongo. Ni kama kazi ya pamoja kwenye shamba lako!</p>
+        
+        <div class="image-container">
+            <div class="image-card">
+                <img src="images/inter5.jpg" alt="Mahindi na Maharage">
+                <div class="image-caption">
+                    <h3><a href="https://elvenagri.co.tz/the-practice-of-intercropping/" target="_blank">Mazoea ya Kilimo cha Mchanganyiko</a></h3>
+                    <p>Jifunze mbinu za kilimo cha mchanganyiko nchini Tanzania.</p>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <img src="images/inter4.jpg" alt="Shamba la Kilimo cha Mchanganyiko">
+                <div class="image-caption">
+                    <h3><a href="https://kiboko.nl/portfolio-item/intercropping/" target="_blank">Faida za Kilimo cha Mchanganyiko</a></h3>
+                    <p>Gundua faida za mifumo ya kilimo cha mchanganyiko.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="benefits-list">
+            <h3>Faida za Kilimo cha Mchanganyiko:</h3>
+            <ul>
+                <li>Uzalishaji wa juu kwa kila eneo</li>
+                <li>Matumizi bora zaidi ya rasilimali zilizopo</li>
+                <li>Hatari ndogo ya kushindwa kwa mazao yote</li>
+                <li>Udhibiti asilia wa wadudu kupitia utofauti</li>
+                <li>Afya bora ya udongo</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2>Kilimo cha Misitu</h2>
+        <p>Panda miti pamoja na mazao yako au mifugo yako, kama mialoni, miembe, au mlonge kati ya mahindi yako au maharage, ili kuifanya shamba lako liwe na nguvu na lenye manufaa zaidi. Panda miti ya kukua haraka kando au kwa safu - kwa mfano, kila futi 10 - ili itoe kivuli kwa mazao yako na kuzuia udongo kufurika wakati wa mvua kubwa. Baada ya muda, majani yake yanaanguka na kuoza, na kulishe udongo kwa njia asili, huku mizizi ikaiweka imara dhidi ya upepo na maji. Pia utapata vitu vya ziada: kuni kutoka kwa matawi, matunda kama maembe ya kula au kuuza, au majani ya mlonge kwa mbuzi wako. Anza kwa kiasi kidogo - panda miti michache mwaka huu - uangalie ardhi yako ikiboreshwa huku ikikupa zaidi ya maisha!</p>
+        
+        <div class="image-container">
+            <div class="image-card">
+                <img src="images/agro3.jpg" alt="Miti na Mazao">
+                <div class="image-caption">
+                    <h3><a href="https://www.treeclicks.com/project/tanzania-agroforestry" target="_blank">Kilimo cha Misitu Tanzania</a></h3>
+                    <p>Miradi ya kilimo cha misitu inayofanya mabadiliko Tanzania.</p>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <img src="images/agro2.jpg" alt="Miti ya Matunda">
+                <div class="image-caption">
+                    <h3><a href="https://theexchange.africa/countries/tanzania/tanzania-qnets-green-legacy-initiative-making-agroforestry-chic/" target="_blank">Mipango ya Kilimo cha Misitu</a></h3>
+                    <p>Mipango ya ubunifu ya kilimo cha misitu nchini Tanzania.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="benefits-list">
+            <h3>Faida za Kilimo cha Misitu:</h3>
+            <ul>
+                <li>Huboresha rutuba na muundo wa udongo</li>
+                <li>Hutoa vyanzo vya ziada vya mapato</li>
+                <li>Hupunguza mmomonyoko wa udongo na mtiririko wa maji</li>
+                <li>Hutengeneza hali ya hewa ndogondogo kwa mazao</li>
+                <li>Huongeza aina mbalimbali za viumbe shambani</li>
+            </ul>
+        </div>
+    </section>
+    
+    <div style="text-align: center;">
+        <a href="home.html" class="back-link">Rudi Nyumbani</a>
+    </div>
+</body>
+</html>
