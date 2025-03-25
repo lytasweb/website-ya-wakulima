@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sw">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
             --light-gray: #f9f9f9;
             --link-color: #1e5631;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -23,27 +24,28 @@
             padding: 20px;
             background-color: var(--light-gray);
         }
-        
-        h1, h2 {
+
+        h1,
+        h2 {
             color: var(--primary-color);
             text-align: center;
         }
-        
+
         h1 {
             margin-bottom: 30px;
             font-size: 2.5rem;
         }
-        
+
         .hero-image {
             width: 100%;
             max-height: 400px;
             object-fit: cover;
             border-radius: 8px;
             margin: 20px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             border: 1px solid var(--accent-color);
         }
-        
+
         .intro-text {
             font-size: 1.2rem;
             text-align: center;
@@ -51,7 +53,7 @@
             margin: 0 auto 30px;
             line-height: 1.8;
         }
-        
+
         .button-container {
             display: flex;
             justify-content: center;
@@ -59,7 +61,7 @@
             margin: 30px 0;
             flex-wrap: wrap;
         }
-        
+
         .cta-button {
             display: inline-block;
             padding: 12px 24px;
@@ -72,13 +74,13 @@
             text-align: center;
             min-width: 200px;
         }
-        
+
         .cta-button:hover {
             background-color: #1e5631;
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        
+
         .features {
             display: flex;
             flex-wrap: wrap;
@@ -86,27 +88,27 @@
             justify-content: center;
             margin: 40px 0;
         }
-        
+
         .feature-card {
             flex: 1 1 300px;
             max-width: 350px;
             background: white;
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
             border: 1px solid var(--accent-color);
             transition: transform 0.3s ease;
         }
-        
+
         .feature-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .feature-card h3 {
             color: var(--primary-color);
             margin-top: 0;
         }
-        
+
         footer {
             text-align: center;
             margin-top: 50px;
@@ -115,79 +117,89 @@
             padding-top: 20px;
             border-top: 1px solid var(--accent-color);
         }
-        
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
             }
-            
+
             .intro-text {
                 font-size: 1.1rem;
             }
-            
+
             .button-container {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
+
+
             .cta-button {
                 width: 100%;
+                display: inline-block;
+                padding: 12px 1%;
             }
         }
     </style>
 </head>
+
 <body>
     <h1>Ujuzi wa Kilimo cha Kilosa</h1>
-    
+
     <img src="images/image1.jpg" alt="Picha ya shamba Kilosa" class="hero-image">
-    
+
     <p class="intro-text">
-        Karibu, wakulima wa Kilosa! Tovuti hii ni mwongozo wako wa mbinu bora za kilimo endelevu. 
+        Karibu, wakulima wa Kilosa! Tovuti hii ni mwongozo wako wa mbinu bora za kilimo endelevu.
         Jifunze mbinu thabiti za kuboresha udongo, kuongeza mavuno, na kukabiliana na mabadiliko ya hali ya hewa
         kwa kutumia njia za gharama nafuu zinazofaa kwa mazingira yetu.
     </p>
-    
+
     <div class="button-container">
         <a href="techniques.html" class="cta-button">Jifunze Mbinu za Kilimo</a>
         <a href="contact.html" class="cta-button">Wasiliana na Wataalamu</a>
     </div>
-    
+
     <h2>Utakachojifunza</h2>
-    
+
     <div class="features">
         <div class="feature-card">
             <h3>Mzunguko wa Mazao</h3>
-            <p>Gundua jinsi ya kubadilisha mazao kila msimu ili kuboresha rutuba ya udongo na kupunguza magonjwa na wadudu bila kutumia dawa za kemikali.</p>
+            <p>Gundua jinsi ya kubadilisha mazao kila msimu ili kuboresha rutuba ya udongo na kupunguza magonjwa na
+                wadudu bila kutumia dawa za kemikali.</p>
         </div>
-        
+
         <div class="feature-card">
             <h3>Utunzaji wa Udongo</h3>
-            <p>Jifunze kutengeneza mbolea asili kutoka kwa taka za shambani ili kuimarisha udongo na uwezo wake wa kuhifadhi maji.</p>
+            <p>Jifunze kutengeneza mbolea asili kutoka kwa taka za shambani ili kuimarisha udongo na uwezo wake wa
+                kuhifadhi maji.</p>
         </div>
-        
+
         <div class="feature-card">
             <h3>Kilimo Cha Mchanganyiko</h3>
-            <p>Jifunze ujuzi wa kupanda mazao mbalimbali pamoja ili kutumia ardhi kwa ufanisi zaidi na kudhibiti wadudu kwa njia asili.</p>
+            <p>Jifunze ujuzi wa kupanda mazao mbalimbali pamoja ili kutumia ardhi kwa ufanisi zaidi na kudhibiti wadudu
+                kwa njia asili.</p>
         </div>
-        
+
         <div class="feature-card">
             <h3>Kilimo Cha Misitu</h3>
-            <p>Panda miti pamoja na mazao yako ili kuzuia mmomonyoko wa udongo, kutoa kivuli, na kuongeza vyanzo vya mapato.</p>
+            <p>Panda miti pamoja na mazao yako ili kuzuia mmomonyoko wa udongo, kutoa kivuli, na kuongeza vyanzo vya
+                mapato.</p>
         </div>
-        
+
         <div class="feature-card">
             <h3>Uhifadhi wa Maji</h3>
             <p>Jifunze mbinu rahisi za kutumia vizuri mvua na maji ya umwagiliaji kwenye shamba lako.</p>
         </div>
-        
+
         <div class="feature-card">
             <h3>Udhibiti wa Wadudu</h3>
             <p>Jifunze njia za asili za kudhibiti wadudu na magonjwa ya mazao bila kutumia dawa za kemikali.</p>
         </div>
     </div>
-    
+
     <footer>
         © 2025 Mradi wa Ujuzi wa Kilimo - Kilosa | Kuwawezesha Wakulima Kupitia Mbinu Endelevu
     </footer>
 </body>
+
 </html>
